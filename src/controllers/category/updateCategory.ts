@@ -6,7 +6,7 @@ export default async (req: Request, res: Response) => {
     const id = +req.params.id
     
     const categoryName = await getCategoryByName(name)
-    if (!categoryName) {
+    if (categoryName) {
         return res.status(404).json({
             message: "Category already exists"
         })

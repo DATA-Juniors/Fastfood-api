@@ -17,7 +17,7 @@ export default async (req: Request, res: Response) => {
             message: "Image not uploaded"
         })
     }
-    
+
     const icon = req.file.filename
     const createCategory = await addCategory(name, icon)
     // console.log("Icon:" + icon)

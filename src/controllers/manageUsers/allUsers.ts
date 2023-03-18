@@ -8,15 +8,6 @@ export default async (req: Request, res: Response) => {
         message: "Retrive all users",
         users: [
             users
-            // {
-            //     id: user,
-            //     email: user.email,
-            //     name: user.name,
-            //     surname: user.surname,
-            //     birthday: user.birthday,
-            //     phone: user.phone,
-            //     role: user.role
-            // },
         ]
     })
 }
