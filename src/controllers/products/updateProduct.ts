@@ -1,10 +1,17 @@
 import { Request, Response } from "express"
 import { ProductDto } from "../../models/products/productDto"
 import { updateProduct } from "../../services/products.service"
+import productSchema from "../../validation/products/products.shema"
 
 export default async (req: Request, res: Response) => {
     const id = +req.params.id
     const product: ProductDto = req.body
+    const {error} = productSchema.validate(req.body)
+    if(error) {
+        return res.status(401).json({
+            error: error.details[0].message
+        })
+    }
     if(!req.file) {
         return res.status(401).json({
             message: "Image not uploaded"
