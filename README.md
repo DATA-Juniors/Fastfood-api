@@ -32,7 +32,7 @@ Version 1 (v1) of the Faveo API is hosted on neowise.uz at and has the following
 | -------------------- |:--------------:| :----------:|
 | /api/v1/products     | GET            |             |
 | /api/v1/products/:id | GET            | :id         |
-| /api/v1/products?category_id=1        | Get            |             |
+| /api/v1/products?category_id=1        | GET            |             |
 | /api/v1/products     | POST           |             |
 | /api/v1/products/:id | DEL            |    :id      |
 | /api/v1/products/:id | PUT            |    :id      |
